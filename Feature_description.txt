@@ -1,0 +1,55 @@
+Description of features per ASN
+—————————
+
+ASN : Autonomous System Number (ASN)
+
+0_drops: Counts of times an ASN stops originating prefixes in the dataset.
+
+Uptime: fraction of time an ASN is seen originating prefixes since it was first seen until it is last seen in the dataset.
+
+10p_adTime, q1_adTime, median_adTime, q3_adTime, 90p_adTime: 10 percentile, 25th percentile (1st quartile), median, 75th percentile (3rd quartile) and 90th percentile of median advertisement time of prefixes originated by ASN.
+
+q1_adTime_highMaxVis, median_adTime_highMaxVis, q3_adTime_highMaxVis:  : 1st quartile (25th percentile), median and 3rd quartile (75th percentile) of the median time high maximum visibility prefixes are originated (advertised) by an ASN. 
+
+q1_adTime_lowMaxVis, median_adTime_lowMaxVis, q3_adTime_lowMaxVis: 1st quartile (25th percentile), median and 3rd quartile (75th percentile) of the median time high low maximum visibility prefixes are originated (advertised) by an ASN. 
+
+q1_adTime_highMedVis, median_adTime_highMedVis, q3_adTime_highMedVis: 1st quartile (25th percentile), median and 3rd quartile (75th percentile) of the median time high median visibility prefixes are originated (advertised) by an ASN.   
+
+q1_adTime_lowMedVis, median_adTime_lowMedVis, q3_adTime_lowMedVis:  1st quartile (25th percentile), median and 3rd quartile (75th percentile) of the median time low median visibility prefixes are originated (advertised) by an ASN.
+
+6months_percent: fraction of prefixes of ASN with advertisement time longer or equal to 180 days.
+
+10p_pfx_medianVis, q1_pfx_medianVis, median_pfx_medianVis, q3_pfx_medianVis, 90p_pfx_medianVis: 0 percentile, 25th percentile (1st quartile), median, 75th percentile (3rd quartile) and 90th percentile of  averaged median normalized visibility of prefixes advertised by ASN.
+
+highMaxVis_percent, lowMaxVis_percent: fraction of prefixes advertised by ASN that have high (>75%)/ low(<15%)  maximum visibility. 
+
+highMedVis_percent, lowMedVis_percent: fraction of prefixes advertised by ASN that have high (>75%)/ low(<15%) median visibility. 
+
+85p_beta_daybins, 85p_beta_monthbins, 85p_beta_weekbins: 85th percentile of beta value ( beta = # of changes to advertised prefixes/median prefix count for prefixes advertised by ASN in one day/week/month bin) distribution for daily, monthly, weekly bins.
+
+95p_alpha_daybins, 95p_alpha_monthbins, 95p_alpha_weekbins : 95th percentile of alpha value (alpha = (maximum prefix count - minimum prefix count)/median prefix count  of prefixes advertised by ASN in one day/week/month bin) distribution for daily, monthly, weekly bins.
+
+1p_MOASlen, 99p_MOASlen: 1st percentile and 99th percentile of the distribution of the time a MOAS prefix is advertised by ASN.
+
+range_MOASlen: Maximum MOAS prefix advertisement time - Minimum MOAS prefix advertisement time per ANS.
+
+var_MOASlen: variance of MOAS prefix advertisement time by ASN.
+
+std_MOASlen: standard deviation of MOAS prefix advertisement time by ASN.
+
+MOAS_add%, MOAS_pfx_%: fraction of address space/prefix count of prefixes originated by an ASN that has a MOAS conflict.
+
+bogons%_add, bogons%_pfx: fraction of address space/prefix count of prefixes originated by an ASN  that is a bogon according to IANA files.
+
+unassigned%_add, unassigned%_pfx: fraction of address space/prefix count of unassigned IP space originated by ASN, according to RIR delegation file.
+
+median/unique_pfx: median prefix count over time ( 5 min granularity) / total number of prefixes ever advertised by ASN in the dataset.
+
+
+rir_count: number of RIR where prefixed originated by an ASN are registered.
+
+rir_gini_add, rir_gini_pfx : Gini index of IP space/prefix count concentration in the 5 different RIRs.
+
+top_rir_add, top_rir_pfx: fraction of IP space/prefix count of an ASN that are registered in the RIR in which the ASN has the largest share of its prefixes registered.
+
+HardVotePred : Classifier prediction 1: ASN flagged as having similar behavior to BGP serial hijackers, 0: ASN not flagged by classifier.
