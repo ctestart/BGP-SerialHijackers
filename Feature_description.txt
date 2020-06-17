@@ -53,3 +53,19 @@ rir_gini_add, rir_gini_pfx : Gini index of IP space/prefix count concentration i
 top_rir_add, top_rir_pfx: fraction of IP space/prefix count of an ASN that are registered in the RIR in which the ASN has the largest share of its prefixes registered.
 
 HardVotePred : Classifier prediction 1: ASN flagged as having similar behavior to BGP serial hijackers, 0: ASN not flagged by classifier.
+
+-----
+Additional classification of flagged networks:
+
+Top1000,Top500,Top100: 1 if in TopXXX according to CAIDA AS-Rank.
+
+PrivateASN: 1 if ASN in  [64512, 65534].
+
+DDoS: 1 if in list of ASes offering DDoS protection.
+
+SH: 1 if in any of the 7 ASN DROP lists from SpamHaus found in https://web.archive.org/
+
+allSH: 1 if in all 7 ASN DROP list from Spamhaus.
+
+UCEspam: 1 if any prefix originated by that AS has been blacklisted by the UCE project at the same time it was announced.
+
