@@ -12,4 +12,4 @@ prediction_set_with_class.csv /.pkl: csv/pandas pickle file with all features of
 
 treeClassifierEnsamble_CR.py: Code to train the voting ensemble of Extra-Trees classifiers from the ground truth to output a prediction for the prediction set.
 
-flagged_networks.csv/.pkl: csv/pandas pickle file with all features of networks flagger by the classifier with the additional classification described in the paper (Blacklisted ASN, blacklisted prefixes, private AS number, DDoS protection provider, top 100, top 500, top 1000 CAIDA AS rank).
+flagged_networks.csv/.pkl: csv/pandas pickle file with all features of networks flagged by the classifier with the additional classification described in the paper (Blacklisted ASN, blacklisted prefixes, private AS number, DDoS protection provider, top 100, top 500, top 1000 CAIDA AS rank).
